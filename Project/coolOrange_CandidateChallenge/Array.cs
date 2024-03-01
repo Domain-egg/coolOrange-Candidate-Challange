@@ -32,7 +32,12 @@ namespace coolOrange_CandidateChallenge
 
 		public static void ShiftLeftByOne(int[] array, int position1, int position2)
 		{
-			throw new NotImplementedException();
+			var firstValue = array.GetValue(position1);
+			for (var i = position1; i < position2-1; i++)
+			{
+				array.SetValue(array.GetValue(i+1), i); 
+			}
+			array.SetValue(firstValue, position2-1);
 		}
 
 		public static int[] CreateRandomArray(int size, int minValue, int maxValue)
