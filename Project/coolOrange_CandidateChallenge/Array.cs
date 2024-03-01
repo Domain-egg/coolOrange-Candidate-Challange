@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace coolOrange_CandidateChallenge
 {
@@ -8,7 +9,11 @@ namespace coolOrange_CandidateChallenge
 
 		public static int FindMaxValue(int[] array, int position1, int position2)
 		{
-			throw new NotImplementedException();
+			var length = position2 - position1 + 1;
+			var slicedArray = new int[length];
+			System.Array.Copy(array, position1, slicedArray, 0, length);
+			return slicedArray.Max();
+			//throw new NotImplementedException();
 		}
 
 		public static int FindMinPosition(int[] array, int position1, int position2)
