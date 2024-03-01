@@ -25,7 +25,9 @@ namespace coolOrange_CandidateChallenge
 
 		public static void Swap(int[] array, int position1, int position2)
 		{
-			throw new NotImplementedException();
+			var valueOfPosition2 = array.GetValue(position2);
+			array.SetValue(array.GetValue(position1),position2);
+			array.SetValue(valueOfPosition2, position1);
 		}
 
 		public static void ShiftLeftByOne(int[] array, int position1, int position2)
