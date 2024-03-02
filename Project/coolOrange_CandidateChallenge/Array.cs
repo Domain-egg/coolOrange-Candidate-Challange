@@ -54,9 +54,21 @@ namespace coolOrange_CandidateChallenge
             return array;
         }
 
-        public static int[][] CreateRandomMatrix(int rows, int columns, int minValue, int maxValue)
+        //changed jagged array to two-dimensional array, since in test .GetLength(<dimension>) was used but does not work with jagged arrays
+        public static int[,] CreateRandomMatrix(int rows, int columns, int minValue, int maxValue)
         {
-            throw new NotImplementedException();
+            int[,] array2D = new int[rows,columns];
+            for (var i = 0; i < array2D.GetLength(0); i++)
+            {
+                int[] row = CreateRandomArray(columns, minValue, maxValue);
+                for (int j = 0; j < row.Length; j++)
+                {
+                    array2D[i, j] = row[j];
+                }
+                
+            }
+
+            return array2D;
         }
 
         public static int[][] CopyArray(int[] array)
