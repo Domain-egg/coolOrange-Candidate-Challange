@@ -43,8 +43,8 @@ namespace coolOrange_CandidateChallenge
 
         public int CompareTo(Task that)
         {
-            if (this.GetComplexity() <  that.GetComplexity()) return -1;
-            if (this.GetComplexity() == that.GetComplexity()) return 0;
+            if (this.GetPriority() <  that.GetPriority()) return -1;
+            if (this.GetPriority() == that.GetPriority()) return 0;
             return 1; 
         }
 
