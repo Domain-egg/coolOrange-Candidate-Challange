@@ -71,9 +71,21 @@ namespace coolOrange_CandidateChallenge
             return array2D;
         }
 
-        public static int[][] CopyArray(int[] array)
+        //changed jagged array to two-dimensional array, since in test .GetLength(<dimension>) was used but does not work with jagged arrays
+        public static int[,] CopyArray(int[] array)
         {
-            throw new NotImplementedException();
+            var result = new int[2,array.Length];
+
+            var copy = new int[array.Length];
+            array.CopyTo(copy, 0);
+            
+            for (int i = 0; i < array.Length; i++)
+            {
+                result[0, i] = array[i];
+                result[1, i] = copy[i];
+            }
+            
+            return result;
         }
 
         public static int FindInSortedArray(int[] array, int number)
