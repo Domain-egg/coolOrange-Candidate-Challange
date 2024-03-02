@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Array.cs" />
+    <Compile Include="IComplexity.cs" />
     <Compile Include="IPriority.cs" />
     <Compile Include="PalindromeChecker.cs" />
     <Compile Include="Priority.cs" />
