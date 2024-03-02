@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace coolOrange_CandidateChallenge
 {
@@ -45,6 +46,19 @@ namespace coolOrange_CandidateChallenge
             if (this.GetComplexity() <  that.GetComplexity()) return -1;
             if (this.GetComplexity() == that.GetComplexity()) return 0;
             return 1; 
+        }
+
+        public string Print()
+        {
+            var sb = new StringBuilder();
+
+            sb.Append(GetName());
+            sb.Append(" priority: ");
+            sb.Append(GetPriority());
+            sb.Append(" complexity: ");
+            sb.Append(GetComplexity());
+            
+            return sb.ToString();
         }
         
     }
