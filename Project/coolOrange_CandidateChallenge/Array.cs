@@ -5,8 +5,6 @@ namespace coolOrange_CandidateChallenge
 {
     public class Array
     {
-        //ToDo
-
         public static int FindMaxValue(int[] array, int position1, int position2)
         {
             var length = position2 - position1 + 1;
@@ -90,7 +88,7 @@ namespace coolOrange_CandidateChallenge
 
         public static int FindInSortedArray(int[] array, int number)
         {
-            throw new NotImplementedException();
+            return System.Array.BinarySearch(array, 0, array.Length, number);
         }
     }
 }
