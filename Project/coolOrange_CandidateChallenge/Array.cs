@@ -58,8 +58,8 @@ namespace coolOrange_CandidateChallenge
             int[,] array2D = new int[rows,columns];
             for (var i = 0; i < array2D.GetLength(0); i++)
             {
-                int[] row = CreateRandomArray(columns, minValue, maxValue);
-                for (int j = 0; j < row.Length; j++)
+                var row = CreateRandomArray(columns, minValue, maxValue);
+                for (var j = 0; j < row.Length; j++)
                 {
                     array2D[i, j] = row[j];
                 }
@@ -77,7 +77,7 @@ namespace coolOrange_CandidateChallenge
             var copy = new int[array.Length];
             array.CopyTo(copy, 0);
             
-            for (int i = 0; i < array.Length; i++)
+            for (var i = 0; i < array.Length; i++)
             {
                 result[0, i] = array[i];
                 result[1, i] = copy[i];
